@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CO2 Emission Reduction Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<header>
+    <h1>CO2 Emissions Game</h1>
+    <img src="ButlerLogo.png" id="logo">
+</header>
+
+<body>
+
+    <div class="container">
+       <section class="input-forms">
+    <h2>Enter Your Daily CO2 Emissions</h2>
+    <form>
+        <h2>Transport</h2>
+        <label for="car">Do you own a car?</label>
+        <select id="car" name="car">
+            <option value="no">No</option>
+            <option value="petrol">Petrol</option>
+            <option value="diesel">Diesel</option>
+        </select>
+        <label for="car-km">How many kilometers have you driven today?</label>
+        <input type="number" id="car-km" name="car-km" min="0" step="1">
+        <br><br>
+        <h2>Holiday Travel</h2>
+        <label for="travel">Have you traveled in the past year?</label>
+        <select id="travel" name="travel"><option value="no">No</option>
+            <option value="yes">Yes</option>
+        </select>
+        <label for="flights">How many flights have you taken?</label>
+        <input type="number" id="flights" name="flights" min="0" step="1">
+        <label for="flight-dist">Enter the total distance of the flights (km):</label>
+        <input type="number" id="flight-dist" name="flight-dist" min="0" step="1">
+        <br><br>
+        <h2>Food</h2>
+        <label for="meat">Do you consume meat?</label>
+        <select id="meat" name="meat">
+            <option value="no">No</option>
+            <option value="yes">Yes</option>
+        </select>
+        <label for="meat-kg">How many kilograms of meat do you consume on average per day?</label>
+        <input type="number" id="meat-kg" name="meat-kg" min="0" step="0.1">
+        <label for="non-meat-kg">How many kilograms of non-meat products do you consume on average per day?</label>
+        <input type="number" id="non-meat-kg" name="non-meat-kg" min="0" step="0.1">
+        <br><br>
+        <h2>House Consumption</h2>
+        <label for="energy">How much energy (kWh) did you consume in the past month?</label>
+        <input type="number" id="energy" name="energy" min="0" step="0.1">
+        <label for="household">How many members are in your household?</label>
+        <input type="number" id="household" name="household" min="1" step="1">
+        <br><br>
+         <h2>Waste Disposal</h2>
+        <label for="recycle">What percentage of your waste do you recycle?</label>
+        <input type="number" id="recycle" name="recycle" min="0" max="100" step="1">
+        <br><br>
+        <button type="submit">Calculate</button>
+        <button id="logoutButton" type="submit">Logout</button>
+
+        <img id="badgeDisplay" class="badge" src="" alt="Badge">
+        <img id="badgeDisplay2" class="badge" src="" alt="Badge">
+            </form>
+        </section>
+
+        <section class="leaderboard">
+            <h2>Leaderboard</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Player</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Player scores will be added dynamically with JavaScript -->
+                </tbody>
+            </table>
+        </section>
+
+
+
+        <section class="boosters">
+            <h2>Boosters</h2>
+            <ul>
+                <li>
+                    <h3>Electric Car</h3>
+                    <p>Reduces travel CO2 emissions by 50%</p>
+                    <p>Cost: 100 points</p>
+                    <button class="booster-purchase" data-booster="electric-car">Purchase</button>
+                </li>
+                <li>
+                    <h3>Recycling Program</h3>
+                    <p>Reduces waste disposal CO2 emissions by 50%</p>
+                    <p>Cost: 50 points</p>
+                    <button class="booster-purchase" data-booster="recycling-program">Purchase</button>
+                </li>
+                <!-- More boosters can be added -->
+            </ul>
+        </section>
+    </div>
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+   <script type="module" src="./firebase.js"></script>
+    <script type="module" src="script.js"></script>
+
+</body>
+</html>

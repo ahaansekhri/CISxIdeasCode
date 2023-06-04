@@ -1,0 +1,196 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+header {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 20px;
+}
+
+h1 {
+  margin: 5px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #ff4646;
+  text-align: center;
+}
+
+/* Set body margin and font properties */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #0;
+  background-color: #ff4646;
+}
+
+#logo{
+    max-width:150px;
+    max-height: 50px;
+    margin: 0 auto;
+    display: block;
+    width: 50%;
+}
+
+/* Set container width and center it on the page */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Set section widths */
+.input-forms, .leaderboard, .boosters {
+  width: calc(33.33% - 20px);
+  margin-bottom: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius:5px;
+  border: 1px solid #ddd;
+  margin-top: 15px;
+
+}
+
+.highlight {
+  background-color: orange;
+}
+
+/* Align input forms and leaderboard sections horizontally */
+.input-forms, .leaderboard {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Set input form margin and padding */
+
+
+/* Style input form headings */
+.input-forms h2 {
+  margin-top: 0;
+  color: #0;
+}
+
+/* Style input form labels */
+.input-forms label {
+  display: block;
+  margin-bottom: 10px;
+  color: #0;
+}
+
+/* Style input form inputs and selects */
+.input-forms input[type="number"], .input-forms select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+/* Style input form submit button */
+.input-forms button[type="submit"] {
+  background-color: #fff;
+  color: #ff4646;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.input-forms button[type="submit"]:hover {
+  background-color: #ddd;
+}
+
+/* Style leaderboard table */
+.leaderboard table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.leaderboard th, .leaderboard td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.leaderboard th {
+  background-color: #fff;
+  font-weight: bold;
+  color: #ff4646;
+}
+
+/* Stack boosters vertically */
+.boosters {
+  display: block;
+}
+
+/* Style boosters list */
+.boosters ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.boosters li {
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.boosters h3 {
+  margin-top: 0;
+  color: #ff4646;
+}
+
+.boosters p {
+  margin-top: 0;
+}
+
+.boosters button {
+  background-color: #fff;
+  color: #ff4646;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.boosters button:hover {
+  background-color: #ddd;
+}
+
+/* Add media query to stack sections vertically on smaller screens */
+@media screen and (max-width: 768px) {
+  .input-forms, .leaderboard, .boosters {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+.badge {
+    position: absolute;
+    top: 20px;
+    right: 60px;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
+
+#badgeDisplay {
+    padding: 10px;
+    right: 20px;
+}
+
+#badgeDisplay2 {
+    padding: 10px;
+    right: 130px;  /* Adjust this value so that the two badges do not overlap */
+}
+
